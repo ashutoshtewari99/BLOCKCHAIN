@@ -12,7 +12,11 @@ class blokchain:
         
     def create_block(self, proof, previous_hash):
         block = {'index' : = len(self.chain) + 1,
-                 'timestamp' : datetime.datetime.now(), }        
+                 'timestamp' : str(datetime.datetime.now()),
+                 'proof': proof,
+                 'previous_hash': previous_hash}  
+        self.chain.append(block)
+        return block
         
  #mining our blockchain
         
